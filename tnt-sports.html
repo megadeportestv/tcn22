@@ -17,6 +17,14 @@
     <link rel="preload" href="/css/209300a5da3642ca.css" as="style"/>
     <link rel="stylesheet" href="/css/209300a5da3642ca.css" data-n-g=""/>
     <noscript data-n-css=""></noscript>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .full-width {
+            width: 100%;
+        }
+    </style>
  </head> 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64aded599c5ef400190228ec&amp;product=sticky-share-buttons" async="async"></script>
     <div id="__next">
@@ -57,7 +65,7 @@
           <main id="content" role="main" class="main">
             <div class="content container">
               <div class="row justify-content-lg-center">
-                <div class="col-12 col-xl-8">
+                <div class="col-12 col-xl-8" id="video-container">
                   <div style="margin-top:-20px">
                     <div class="fluidMedia">
                      <iframe class="allow-scripts allow-same-origin" id="iframe" name="iframe" allow="encrypted-media *;" src="/repro.html?r=aHR0cHM6Ly9jb255d2hhbi5iYXIvc3Rhci5odG1sP2dldD1odHRwczovL2xpdmUtZnRjLW5hLXNvdXRoLTIubWVkaWEuc3Rhcm90dC5jb20vZ3J1MS9xYjAxL3N0YXJwbHVzL2V2ZW50LzIwMjQvMDUvMTgvUml2ZXJfUGxhdGVfdnNfQmVsZ3Jhbm9fMjAyNDA1MThfMTcxNjA1OTc1NjA0MS9jdHItYWxsLWNvbXBsZXRlLm0zdTgmaW1nPWh0dHBzOi8vcHJvZC1yaXBjdXQtZGVsaXZlcnkuZGlzbmV5LXBsdXMubmV0L3YxL3ZhcmlhbnQvc3Rhci9DODAwQTgzQUM1QjA2REMwMzY1QzEyNTZBRjQ3RTVBRThCOTg5NUIzRUI5QUUzQzBCRTI1QUU5NEQyMDhCQTM4L3NjYWxlP3dpZHRoPTE5MjAmYXNwZWN0UmF0aW89MS43OCZmb3JtYXQ9anBlZyZrZXk9ZjVjOThlNjVkNjAwNDg0YWJlYTMzNWYyN2U4MWI5Njcma2V5Mj0yY2RjNzgwMGYzMDRjZjRhOTQ3NDVlNjllOTJhOWNiZA==" frameborder="0" scrolling="no" allowfullscreen="" width="100%" height="100%"></iframe>
@@ -161,4 +169,42 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <body>
+   <script>
+    function toggleChat() {
+        var chatContainer = document.querySelector('.chat-container');
+        var videoContainer = document.getElementById('video-container');
+        var toggleButton = document.getElementById('toggle-chat');
+        
+        if (chatContainer.style.display === 'none') {
+            chatContainer.style.display = 'block';
+            videoContainer.classList.remove('full-width');
+            toggleButton.textContent = 'Ocultar Chat';
+        } else {
+            chatContainer.style.display = 'none';
+            videoContainer.classList.add('full-width');
+            toggleButton.textContent = 'Mostrar Chat';
+        }
+    }
+
+    // Función para mostrar u ocultar el botón del chat dependiendo del ancho de la pantalla
+    function toggleButtonVisibility() {
+        var button = document.getElementById("toggle-chat");
+        if (window.innerWidth >= 768) { // Mostrar el botón en dispositivos con un ancho de pantalla de al menos 768px (computadoras)
+            button.style.display = "block";
+        } else {
+            button.style.display = "none"; // Ocultar el botón en dispositivos con un ancho de pantalla menor a 768px (móviles y tablets)
+        }
+    }
+
+    // Ejecutar la función cuando la página se cargue inicialmente
+    window.onload = function() {
+        toggleButtonVisibility();
+    };
+
+    // Ejecutar la función cada vez que se redimensione la ventana
+    window.onresize = function() {
+        toggleButtonVisibility();
+    };
+</script>
+</body>
+</html>
