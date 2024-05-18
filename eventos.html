@@ -159,20 +159,17 @@ function getParameterByName(name) {
 <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script>
+   <script>
     function toggleChat() {
-        var chatContainer = document.getElementById('chat-container');
+        var chatContainer = document.querySelector('.chat-container');
         var videoContainer = document.getElementById('video-container');
-        var chatIframe = document.getElementById('chat-iframe');
         var toggleButton = document.getElementById('toggle-chat');
         
-        if (chatIframe.classList.contains('hidden')) {
-            chatIframe.classList.remove('hidden');
+        if (chatContainer.style.display === 'none') {
             chatContainer.style.display = 'block';
             videoContainer.classList.remove('full-width');
             toggleButton.textContent = 'Ocultar Chat';
         } else {
-            chatIframe.classList.add('hidden');
             chatContainer.style.display = 'none';
             videoContainer.classList.add('full-width');
             toggleButton.textContent = 'Mostrar Chat';
