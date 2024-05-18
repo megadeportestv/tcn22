@@ -17,6 +17,26 @@
     <link rel="preload" href="/css/209300a5da3642ca.css" as="style"/>
     <link rel="stylesheet" href="/css/209300a5da3642ca.css" data-n-g=""/>
     <noscript data-n-css=""></noscript>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .btn-toggle-chat {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 9999;
+        }
+        @media (min-width: 768px) {
+            .btn-toggle-chat {
+                display: block;
+            }
+        }
+    </style>
  </head> 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64aded599c5ef400190228ec&amp;product=sticky-share-buttons" async="async"></script>
     <div id="__next">
@@ -75,7 +95,9 @@
  <a target="iframe" href="/repro.html?r=Ly90dWNhbmFsZGVwb3J0aXZvLmNvbS9lc3BucHJlbWl1bS1zZC5waHA=">
    <button class="btn btn-white btn-repro">Opción 3 (Ads)</button>
    </a>
-                       
+
+<button id="toggle-chat" class="btn btn-primary btn-repro" type="button" onclick="toggleChat()">Ocultar Chat</button>
+                         
        <a class="chatm" target="gh" href="https://www.twitch.tv/embed/megadeportestv212/chat?parent=megadeportestv2.online&darkpopout&no-mobile-redirect=true">
                          <button class="btn btn-primary btn-repro" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Abrir Chat</button>
                        </a>
@@ -161,4 +183,44 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+        <script>
+    function toggleChat() {
+        var chatContainer = document.getElementById('chat-container');
+        var videoContainer = document.getElementById('video-container');
+        var chatIframe = document.getElementById('chat-iframe');
+        var toggleButton = document.getElementById('toggle-chat');
+        
+        if (chatIframe.classList.contains('hidden')) {
+            chatIframe.classList.remove('hidden');
+            chatContainer.style.display = 'block';
+            videoContainer.classList.remove('full-width');
+            toggleButton.textContent = 'Ocultar Chat';
+        } else {
+            chatIframe.classList.add('hidden');
+            chatContainer.style.display = 'none';
+            videoContainer.classList.add('full-width');
+            toggleButton.textContent = 'Mostrar Chat';
+        }
+    }
+
+    // Función para mostrar u ocultar el botón del chat dependiendo del ancho de la pantalla
+    function toggleButtonVisibility() {
+        var button = document.getElementById("toggle-chat");
+        if (window.innerWidth >= 768) { // Mostrar el botón en dispositivos con un ancho de pantalla de al menos 768px (computadoras)
+            button.style.display = "block";
+        } else {
+            button.style.display = "none"; // Ocultar el botón en dispositivos con un ancho de pantalla menor a 768px (móviles y tablets)
+        }
+    }
+
+    // Ejecutar la función cuando la página se cargue inicialmente
+    window.onload = function() {
+        toggleButtonVisibility();
+    };
+
+    // Ejecutar la función cada vez que se redimensione la ventana
+    window.onresize = function() {
+        toggleButtonVisibility();
+    };
+</script>
     <body>
