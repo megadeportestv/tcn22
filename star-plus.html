@@ -225,7 +225,7 @@
             success: function (arr) {
                 var content = '';
 
-                 for (var i = 0; i < arr.length; i++) {
+                for (var i = 0; i < arr.length; i++) {
                     if (i % 4 == 0) {
                         if (i != 0)
                             content += '</div>';
@@ -240,7 +240,11 @@
                     if (url !== "#") {
                         let nurl = url.replace("/embed/eventos/?r=", "");
                         nurl = atob(nurl);
+                        
+                        // Eliminar la parte intermedia no deseada
                         let wurl = nurl.replace("https://jeinzmaciastv.com/star_jwp.html?get=", "");
+                        wurl = wurl.replace("https://alwaysdomain01.online/85043671.html?get=", "");
+
                         wurl = "https://flow.blectowe.rodeo/s.html?get=" + wurl;
                         let furl = btoa(wurl);
                         console.log(furl);
@@ -282,6 +286,7 @@
         eventos();
     }, 60000);
 </script>
+
 </div></div></section></main><div>
             <footer class="footer dark-mode bg-dark border-top border-light py-5">
               <div class="container pt-2 pt-sm-4">
