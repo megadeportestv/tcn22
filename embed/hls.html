@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--<script disable-devtool-auto src="//fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js"></script>-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+</head>
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+<body>
+    <div class="container">
+    <div id="player"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https://content.jwplatform.com/libraries/KB5zFt7A.js'></script>
+    <script>
+        $(document).ready(function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventId = urlParams.get('id');
+            const eventImg = urlParams.get('img');
+
+            function setupPlayer() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://bfaead71-54b3-4f80-8f93-d0058df98923-00-12hy22la4sf80.janeway.replit.dev/' + eventId + '.php?' + Math.random().toString(36).substring(7), true);
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var data = JSON.parse(xhr.responseText);
+                        var playerInstance = jwplayer("player");
+
+                        playerInstance.setup({
+                            playlist: [{
+                                image: eventImg,
+                                sources: [{
+                                    default: false,
+                                    file: data.hls,
+                                    label: "0",
+                                    type: "hls"
+                                }],
+                            }],
+                            height: "100vh",
+                            width: "100%",
+                            aspectratio: "16:9",
+                            autostart: false,
+                            logo: {
+                                //file: "",
+                                hide: "false",
+                                position: "top-left"
+                            }
+                        });
+
+                        playerInstance.on('error', function(event) {
+                            if (event.code === 232403 || event.code === 232404) {
+                                location.reload();
+                            }
+                        });
+                    }
+                };
+                xhr.send();
+            }
+
+            setupPlayer(); 
+        });
+    </script>
+</body>
+</html>
