@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #E0E0E0; /* Texto claro */
+}
+
+.card {
+    border: 1px solid #547484;
+    background-color: #1E1E1E; /* Fondo de tarjeta oscuro */
+    color: #E0E0E0; /* Texto de tarjeta claro */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none; /* Sin borde para una apariencia más limpia */
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.equipo {
+    flex: 1;
+    max-width: 150px;
+}
+
+.equipo img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.informacion {
+    flex: 1;
+    max-width: 200px;
+}
+
+.t {
+    font-size: 24px;
+}
+
+.competencia {
+    font-size: 14px;
+    color: #B0B0B0; /* Color del texto para competencia */
+}
+
+.collapse .list-group-item {
+    background-color: #2E2E2E; /* Fondo de las opciones colapsadas */
+    color: #E0E0E0; /* Texto de las opciones colapsadas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapse .list-group-item a {
+    text-decoration: none;
+    color: #66BB6A; /* Color de los enlaces */
+    flex: 1;
+    text-align: left;
+}
+
+.collapse .list-group-item .badge {
+    flex-shrink: 0;
+    text-align: right;
+    background-color: #42A5F5; /* Color de las etiquetas */
+}
