@@ -60,7 +60,7 @@ body {
 
 .collapse .list-group-item a {
     text-decoration: none;
-    color: #66BB6A; /* Color de los enlaces */
+    color: #f9f9f9; /* Color de los enlaces */
     flex: 1;
     text-align: left;
 }
