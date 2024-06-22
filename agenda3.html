@@ -18,7 +18,24 @@ function timedRefresh(timeoutPeriod) {
 window.onload = timedRefresh(30000);
 </script>
 </head>
+<style>
+        /* Estilo para el enlace completo */
+        .complete-link {
+            color: black; /* Color del texto principal */
+            text-decoration: none; /* Sin subrayado por defecto */
+        }
 
+        /* Estilo para la palabra "extensión" */
+        .highlighted-link {
+            text-decoration: underline; /* Subrayado para "extensión" */
+            color: red; /* Color específico para "extensión" */
+        }
+
+        /* Cambios de color al pasar el ratón sobre "extensión" */
+        .highlighted-link:hover {
+            color: blue; /* Cambia a azul al pasar el mouse */
+        }
+    </style>
 <body link="#547484" onload="guardaHorario();dT();" vlink="#547484">
 
 <div class="container my-5">
@@ -104,10 +121,14 @@ window.onload = timedRefresh(30000);
                         <a href="/espn" target="_blank">ESPN</a>
                         <span class="badge bg-primary rounded-pill">720p</span>
                     </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Y2hyb21lLWV4dGVuc2lvbjovL29wbWVvcGNhbWJoZmltZmZib21qZ2VtZWhqa2JibWppL3BhZ2VzL3BsYXllci5odG1sI2h0dHBzOi8vbGl2ZS1ha2Mtc2EtZWFzdC0xLm1lZGlhLnN0YXJvdHQuY29tL2dydTEvdmEwMS9zdGFycGx1cy9ldmVudC8yMDI0LzA2LzIyL1R1cmtleV92c19Qb3J0dWdhbF8yMDI0MDYyMl8xNzE5MDY1NzE2MDMwL2N0ci1hbGwtY29tcGxldGUubTN1OD8mY2s9ZXlJNU9UUTNaR05sT0RNek5qVTBNVGs1WWpnMlpqWmhZelprTWpNM1pHWTBaQ0k2SWpJMU16VTFZMkV6T1daak9UTmtaVEV4T0RBMVpERXpPRGt4WkRWa1ltSmlJbjA9" target="_blank">Star+ (PC + Extensión)</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+        <a class="complete-link" href="/eventos?r=Y2hyb21lLWV4dGVuc2lvbjovL29wbWVvcGNhbWJoZmltZmZib21qZ2VtZWhqa2JibWppL3BhZ2VzL3BsYXllci5odG1sI2h0dHBzOi8vbGl2ZS1ha2Mtc2EtZWFzdC0xLm1lZGlhLnN0YXJvdHQuY29tL2dydTEvdmEwMS9zdGFycGx1cy9ldmVudC8yMDI0LzA2LzIyL1R1cmtleV92c19Qb3J0dWdhbF8yMDI0MDYyMl8xNzE5MDY1NzE2MDMwL2N0ci1hbGwtY29tcGxldGUubTN1OD8mY2s9ZXlJNU9UUTNaR05sT0RNek5qVTBNVGs1WWpnMlpqWmhZelprTWpNM1pHWTBaQ0k2SWpJMU16VTFZMkV6T1daak9UTmtaVEV4T0RBMVpERXpPRGt4WkRWa1ltSmlJbjA9" target="_blank">
+            Star+ (PC + 
+            <a class="highlighted-link" href="https://chromewebstore.google.com/detail/videoplayer-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji" target="_blank">extensión</a>
+            )
+        </a>
+        <span class="badge bg-primary rounded-pill">720p</span>
+    </li>
 		   <li class="list-group-item d-flex justify-content-between align-items-center">
                         <a href="/eventos?r=Ly9hbmNlcHJvdi5iZXN0L2VtYmVkL2hscy5waHA/aWQ9MDJhYjNlZDEtY2YwYS00MzliLWI1N2EtMmNhMWFhOGFlNjlj" target="_blank">ESPN (iPhone)</a>
                         <span class="badge bg-primary rounded-pill">720p</span>
