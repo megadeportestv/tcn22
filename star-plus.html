@@ -232,25 +232,18 @@
 
                         content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
                     }
-
-                    var obj = arr[i];
-
-                    // Integrar lógicas aquí
-                    var url = obj['url'];
-                    if (url !== "#") {
-                        let nurl = url.replace("/embed/eventos/?r=", "");
-                        nurl = atob(nurl);
-                        let wurl = nurl.replace("https://anceprov.best/embed/extension.html?r=", "");
-                        wurl = "https://anceprov.best/embed/extension.html?r=" + wurl;
-                        let furl = btoa(wurl);
-                        console.log(furl);
-
-                        // Concatenamos link ya tratado
-                        url = "https://megadeportestv2.online/eventos?r=" + furl;
-                    } else {
-                        // Link no está listo
-                        console.log('Link no está listo: ' + url);
-                    }
+        var _0x5e420a = _0x438ad6[_0x17fa20],
+          _0x4692a3 = _0x5e420a.url
+        if (_0x4692a3 !== '#') {
+          var _0x2c1ed4 = _0x4692a3.replace('/embed/eventos/?r=', '')
+          _0x2c1ed4 = atob(_0x2c1ed4)
+          var _0x300326 = _0x2c1ed4.replace(/.*?id=/, '')
+          _0x300326 = '//anceprov.best/embed/extension.html?r=' + _0x300326
+          var _0x557894 = btoa(_0x300326)
+          _0x4692a3 = 'https://megadeportestv2.online/eventos?r=' + _0x557894
+        } else {
+          console.log('Link no está listo: ' + _0x4692a3)
+        }
 
                     if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
                         status = obj['status'];
