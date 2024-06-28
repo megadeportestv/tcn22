@@ -28,65 +28,6 @@ window.onload = timedRefresh(30000);
 	    	    	    
     <div class="col-md-12">
             <div class="card">
-                <div class="card-body d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#opciones-canales-4">
-                    <div class="equipo text-center">
-                        <img src="https://api.sofascore.app/api/v1/team/4820/image" alt="Escudo Local" class="img-fluid escudo">
-                        <p class="card-text">Colombia</p>
-                    </div>
-                    <div class="informacion text-center">
-                        <span class="t">23:00</span>
-                        <p class="competencia">Copa América</p>
-                    </div>
-                    <div class="equipo text-center">
-                        <img src="https://api.sofascore.app/api/v1/team/4756/image" alt="Escudo Visitante" class="img-fluid escudo">
-                        <p class="card-text">Costa Rica</p>
-                    </div>
-                </div>
-            </div>
-            <div id="opciones-canales-4" class="collapse">
-                <ul class="list-group mt-3">
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/tyc-sports" target="_blank">TyC Sports</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/dsports" target="_blank">DSports</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/vix-plus" target="_blank">VIX+</a>
-                        <span class="badge bg-primary rounded-pill">1080p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=L20zdTguaHRtbD9nZXQ9THk5MFpXeGxZMjl5Y0c5eVlXTnBiMjR0WlhNdVkyUnVMbloxYzNSeVpXRnRjeTVqYjIwdmJHbDJaUzlpT0RnelkyTmtOUzFqWTJWaExUUmtPRFV0WW1VeFl5MWxNR1EwTURjMk1ESTBZVGN2YkdsMlpTNXBjMjFzTHk1dE0zVTQ=" target="_blank">Canal 4 SV</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Ly9jbGFyb3ZpZGVvLm1lZ2F0ZWxldmlzaW9udHYub25saW5lLz91cmw9YUhSMGNITTZMeTlrYjJ4dlkyRnNiR2wyWldOb1lXNXVaV3hrWVhOb0xtTnNZWEp2ZG1sa1pXOHVZMjl0TDBOdmJuUmxiblF2UkVGVFNGOUVRVk5JWDBaTEwweHBkbVV2UTJoaGJtNWxiQ2hEUkU1RVJWQlBVbFJGVTBoRUtTOXRZVzVwWm1WemRDNXRjR1E9JmsxPVlqWXdaVGd3TmpkaVpUWmhNbUZsTUdFMk1XVXpZalZrT0RaaVl6azFOVFU9JmsyPVpERXdPV1UzWVRrNVpEUXpabVEyWXpKa1pqZzRZbVkwTUdJeU9UWTJNVFE9" target="_blank">CDN Deportes DO</a>
-                        <span class="badge bg-primary rounded-pill">1080p</span>
-                    </li>	
-	         <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Ly9hbmNlcHJvdi5iZXN0L2VtYmVkL2hscy5waHA/aWQ9NDhiZDMyYzQtYTI2OC00YWIwLWJmZTEtZDMzZWE2MzBkNmU2" target="_blank">RCN CO</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Ly9hbmNlcHJvdi5iZXN0L2VtYmVkL2NoMS5waHA/aWQ9VlNQT1JUU18xX05P" target="_blank">V Sport 1 NO</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Ly9hbmNlcHJvdi5iZXN0L2VtYmVkL2hscy5waHA/aWQ9MTcwNzZiN2MtMTY3Ni00N2EwLTlhNTMtY2FjNjcxMGVlNDZk" target="_blank">SporTV BR</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		<li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="/eventos?r=Ly9hbmNlcHJvdi5iZXN0L2VtYmVkL3NsaW5nLz9jaGFubmVsPTBjNjk2NGQyNmJjZDQ1MGNiN2Q4YzhhZjEwYjlkYTIwJmF1dGg9ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUlzSW10cFpDSTZJak0xTXpnMk5qWTFMVE16TmpRdE5qTXpOeTB6TWpZMExUTTVNelV6TlRZMk16azJOQ0o5LmV5SjFjMlZ5WDJkMWFXUWlPaUk1TnpWbVl6VXpNaTFrWTJZeUxURXhaV0V0T1RBNU5DMHhNalEwTTJVMFlUQXlPRE1pTENKamFHRnVibVZzWDJkMWFXUWlPaUl3WXpZNU5qUmtNalppWTJRME5UQmpZamRrT0dNNFlXWXhNR0k1WkdFeU1DSXNJbVI1Ym1GZmFXUWlPaUkxTmpBaUxDSnhkblFpT2lKb2RIUndjem92TDNBdGNHeGhlV1Z5YldWMFlXUmhkR0V1YVcxdmRtVjBkaTVqYjIwdmNHeGhlV1Z5YldWMFlXUmhkR0V2YzJ4cGJtY3ZkakV2WVhCcEwyTm9ZVzV1Wld4ekx6QmpOamsyTkdReU5tSmpaRFExTUdOaU4yUTRZemhoWmpFd1lqbGtZVEl3TDNOamFHVmtkV3hsTDI1dmR5OXdiR0Y1WW1GamExOXBibVp2TG5GMmRDSXNJbU52Ym5SbGJuUmZkSGx3WlNJNklteHBkbVVpZlEuUWQ3aUlpdW9jdEZsSmdSTEpRVHMtbVlSakJzLUYzdE5lVDY2NnpxMzhlTGtVcVMyUkNEalNvRFZyMFJWdTlnZF9MbjU2ZVZfbExBWEwtcDM5Um1UamdLZ0xrZkhmaXVkcFJ4S0FlUjliZXdIMTVIZE13RmtZMktTczdXQ0c3ZTVKOVhiUFhYbXd1aWg5OXM5eEdjQ1BEMHBPS2NzY1dfak41VEZwcTZrZ3FVd3FaSmxFSlpCRUV3Ti1lRVJKSjdNVUNSU3MzcEJvVkRLcFdPeXY5d3hLX2ZRcFBCbU1wQ0VuTmZFZUVpOURZOTF5Xzc0RUdOZi16b1RRaTdLNXNMLWRNbUg4Z1AwNlUyVndNSXpUXzM2STdHNUYzYXFMYkt4bVN2ZXkxUGRkVEZscGtOQlZjNWJkZEtGWFVpZXlSbUp0a0RJbmxUV1NkT0V2REs1THdvME5n" target="_blank">FS1 US</a>
-                        <span class="badge bg-primary rounded-pill">720p</span>
-                    </li>	
-		</ul>
-            </div>
-        </div>
-
-    <div class="col-md-12">
-            <div class="card">
                 <div class="card-body d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#opciones-canales-8">
                     <div class="equipo text-center">
                         <img src="https://api.sofascore.app/api/v1/team/3642/image" alt="Escudo Local" class="img-fluid escudo">
